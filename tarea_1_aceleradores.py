@@ -83,6 +83,8 @@ def initial_data():
         try:
             x0 = input("Ingrese la posición inicial x0 de la partícula (m): ")
             x0 = int(x0.strip())
+            if x0 < 0:
+                raise ValueError
             break
         except ValueError:
             print("\nPosición inicial inválida, inténtelo nuevamente\n")
